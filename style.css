@@ -1,0 +1,183 @@
+/* استيراد خط Cairo من Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap');
+
+/* إعدادات عامة */
+body {
+    margin: 0;
+    font-family: 'Cairo', sans-serif; /* استخدام خط عصري من Google Fonts */
+    background: linear-gradient(180deg, #f2f2f2, #e0e0e0); /* تدرج رمادي فاتح إلى متوسط */
+    color: #333; /* لون النص */
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* تنسيق شريط التنقل (Navbar) */
+nav {
+    background-color: #4e4e50; /* تدرج رمادي غامق */
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* ظل خفيف */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #d6d8db; /* تأثير عند التمرير على الروابط */
+}
+
+/* إعدادات الرأس */
+header {
+    background: linear-gradient(90deg, #4e4e50, #3a3a3c); /* تدرج رمادي غامق */
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* ظل خفيف */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3.2em;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    opacity: 0.85;
+}
+
+/* تنسيق القسم الرئيسي */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+section h2 {
+    font-size: 2.4em;
+    color: #4e4e50;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #d6d8db; /* خط سفلي أنيق */
+    padding-bottom: 10px;
+}
+
+section h3 {
+    font-size: 2em;
+    color: #3a3a3c;
+    margin-top: 40px;
+    border-bottom: 2px solid #d6d8db;
+    padding-bottom: 8px;
+}
+
+section p {
+    font-size: 1.3em;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+/* إضافة خط مميز بين الفقرات */
+section p + p::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #d6d8db;
+    margin: 20px 0;
+}
+
+/* تنسيق الخريطة */
+iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+/* تنسيق التذييل */
+footer {
+    background-color: #3a3a3c; /* لون رمادي غامق */
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0 0 15px;
+    font-size: 1.1em;
+    color: #ccc;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    font-size: 1.1em;
+    margin: 8px 0;
+    color: #eee;
+}
+
+/* تأثيرات إضافية */
+header, section, footer {
+    transition: all 0.3s ease-in-out;
+}
+
+header:hover {
+    background: linear-gradient(90deg, #3a3a3c, #2c2c2e); /* تغيير تدرج عند التمرير */
+}
+
+footer:hover {
+    background-color: #2c2c2e; /* تغيير التذييل عند التمرير */
+}
+
+/* تحسين التنقل بين الفقرات */
+section p + p {
+    margin-top: 20px;
+}
+
+/* تحسين ظهور المحتوى */
+section h2, section h3 {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
